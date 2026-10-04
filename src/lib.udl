@@ -1,0 +1,21 @@
+namespace surrealdb_local_wrapper {};
+
+[Error]
+enum BridgeError{
+	"Connection",
+	"Config",
+	"Query",
+	"Serialization",
+	"NotConnected"
+};
+
+interface SurrealdbBridge{
+	[Throws=BridgeError]
+	constructor(string path, string namespace, string database);
+	
+	[Async, Throws=BridgeError]
+	string insertar(string table, string json_data);
+	
+	[Async, Throws=BridgeError]
+	string query_dynamic(string surql);	
+};

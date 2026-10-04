@@ -1,0 +1,8 @@
+[bindings.kotlin]
+package_name = "wuilmerj24.dev.surrealdb_local_wrapper"
+cdylib_name = "surrealdb_local_wrapper"
+android = true
+
+[bindings.swift]
+cdylib_name = "surrealdb_local_wrapper"
+module_name = "surrealdb_local_wrapper"
